@@ -24,6 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>React Wars</h1>
       {characters.map(elem => <Character character={elem} />)}
     </div>
   );
