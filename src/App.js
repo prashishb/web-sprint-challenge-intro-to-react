@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Character from './components/Character';
+import styled from 'styled-components';
 import './App.css';
 
 const App = () => {
@@ -24,10 +25,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>React Wars</h1>
+      <StyledTitle>REACT WARS</StyledTitle>
       {characters.map(elem => <Character character={elem} />)}
     </div>
   );
 }
+
+const StyledTitle = styled.h1`
+  font-family: 'Monoton', cursive;
+  font-weight: 400;
+  font-size: 60px;
+  color: white;
+`
 
 export default App;
