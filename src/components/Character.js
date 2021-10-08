@@ -52,23 +52,24 @@ const StyledAccordion = styled.div`
     /* margin-bottom: 1%; */
 
     .accordion {
-        background-color: #eee;
+        background-color: #2A2B2E;
         color: #444;
         cursor: pointer;
         padding: 18px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: none;
+        border: 1px solid yellow;;
         outline: none;
         transition: background-color 0.4s ease-in-out;
         &:hover {
-            background-color: #ccc;
+            filter: brightness(70%);
         }
     }
 
     .accordion-title {
         font-size: 20px;
+        color: white;
     }
 
     .accordion-content {
@@ -78,6 +79,9 @@ const StyledAccordion = styled.div`
         font-size: 20px;
         line-height: 2;
         padding-left: 1%;
-        background-color: #ccc;
+        background-color: #2A2B2E;
+        color: white;
+        border: 1px solid yellow;
+        border-top: none;
     }
 `
