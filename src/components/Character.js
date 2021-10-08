@@ -17,28 +17,39 @@ export default function Character(props) {
     }
 
     return (
-        <StyledAccordion>
-            <button className={`accordion ${activeState}`} onClick={toggleAccordion}>
-                <h2 className="accordion-title">{character.name}</h2>
-                <h2 className="accordion-title">{character.birth_year}</h2>
-            </button>
-            <div ref={content} style={{maxHeight: `${heightState}`}} class="accordion-content">
-                <p>Gender: {character.gender}</p>
-                <p>Height: {character.height}</p>
-                <p>Mass: {character.mass}</p>
-                <p>BirthYear: {character.birth_year}</p>
-                <p>Eye Color: {character.eye_color}</p>
-                <p>Hair Color: {character.hair_color}</p>
-                <p>Skin Color: {character.skin_color}</p>
-            </div>
-        </StyledAccordion>
+        <StyledContainer>
+            <StyledAccordion>
+                <button className={`accordion ${activeState}`} onClick={toggleAccordion}>
+                    <h2 className="accordion-title">{character.name}</h2>
+                    <h2 className="accordion-title">{character.birth_year}</h2>
+                </button>
+                <div ref={content} style={{maxHeight: `${heightState}`}} class="accordion-content">
+                    <p>Gender: {character.gender}</p>
+                    <p>Height: {character.height}</p>
+                    <p>Mass: {character.mass}</p>
+                    <p>BirthYear: {character.birth_year}</p>
+                    <p>Eye Color: {character.eye_color}</p>
+                    <p>Hair Color: {character.hair_color}</p>
+                    <p>Skin Color: {character.skin_color}</p>
+                </div>
+            </StyledAccordion>
+        </StyledContainer>
     )
 }
+
+const StyledContainer = styled.div`
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(11,55,47, 20%);
+    box-shadow: 0px 1px 6px -2px rgba(42, 43, 46, 60%);
+    padding: 1%;
+    border-radius: 1%;
+`
 
 const StyledAccordion = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
 
     .accordion {
         background-color: #eee;
@@ -50,7 +61,7 @@ const StyledAccordion = styled.div`
         align-items: center;
         border: none;
         outline: none;
-        transition: background-color 0.6s ease;
+        transition: background-color 0.4s ease-in-out;
         &:hover {
             background-color: #ccc;
         }
@@ -62,10 +73,11 @@ const StyledAccordion = styled.div`
 
     .accordion-content {
         overflow: hidden;
-        transition: max-height 0.6s ease;
+        transition: max-height 0.4s ease-in-out;
         text-align: left;
         font-size: 20px;
         line-height: 2;
         padding-left: 1%;
+        background-color: #ccc;
     }
 `
