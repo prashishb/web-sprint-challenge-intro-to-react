@@ -36,6 +36,7 @@ const StyledTitle = styled.h1`
   font-weight: 400;
   font-size: 60px;
   color: white;
+  text-shadow: 3px 3px 8px white;
   word-spacing: 30px;
 
   @media (max-width: 750px) {
