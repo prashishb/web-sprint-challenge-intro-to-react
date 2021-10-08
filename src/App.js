@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <StyledTitle>REACT WARS</StyledTitle>
+      <StyledTitle>REACT WARS ></StyledTitle>
       {characters.map(elem => <Character character={elem} />)}
     </div>
   );
@@ -36,6 +36,7 @@ const StyledTitle = styled.h1`
   font-weight: 400;
   font-size: 60px;
   color: white;
+  word-spacing: 30px;
 `
 
 export default App;
