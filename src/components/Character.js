@@ -41,7 +41,7 @@ export default function Character(props) {
 const StyledContainer = styled.div`
     width: 50%;
     margin: 0 auto;
-    background: rgba(11,55,47, 20%);
+    background: rgba(11,55,47, 15%);
     box-shadow: 0px 1px 6px -2px rgba(42, 43, 46, 60%);
     padding: 1%;
     border-radius: 1%;
@@ -74,6 +74,13 @@ const StyledAccordion = styled.div`
         font-size: 32px;
         color: white;
         text-align: left;
+    }
+    .year {
+        color: rgba(157, 133, 232);
+        filter: brightness(60%);
+        background: rgba(204, 204, 204);
+        border-radius: 15px 30px;
+        padding: 0.1% 3%;
     }
 
     .accordion-content {
