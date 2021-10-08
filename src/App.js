@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {characters.map(elem => <Character character={elem} />)};
+      {characters.map(elem => <Character character={elem} />)}
     </div>
   );
 }
