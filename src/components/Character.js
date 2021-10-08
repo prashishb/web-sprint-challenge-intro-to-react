@@ -1,6 +1,7 @@
 // Write your Character component here
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import '../index.css'
 
 
 export default function Character(props) {
@@ -21,7 +22,7 @@ export default function Character(props) {
             <StyledAccordion>
                 <button className={`accordion ${activeState}`} onClick={toggleAccordion}>
                     <h2 className="accordion-title">{character.name}</h2>
-                    <h2 className="accordion-title">{character.birth_year}</h2>
+                    <h2 className="accordion-title year">{character.birth_year}</h2>
                 </button>
                 <div ref={content} style={{maxHeight: `${heightState}`}} class="accordion-content">
                     <p>Gender: {character.gender}</p>
@@ -55,6 +56,7 @@ const StyledAccordion = styled.div`
         color: #444;
         cursor: pointer;
         padding: 18px;
+        height: 8vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -67,20 +69,52 @@ const StyledAccordion = styled.div`
     }
 
     .accordion-title {
-        font-size: 20px;
+        font-family: 'Saira Stencil One', cursive;
+        font-weight: 400;
+        font-size: 32px;
         color: white;
+        text-align: left;
     }
 
     .accordion-content {
+        font-family: 'Saira Stencil One', cursive;
+        font-weight: 400;
+        font-size: 26px;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out;
         text-align: left;
-        font-size: 20px;
         line-height: 2;
-        padding-left: 1%;
+        padding-left: 2%;
         background-color: #2A2B2E;
         color: white;
         border: 1px solid rgba(255,255,0, 40%);
         border-top: none;
+    }
+
+    @media (max-width: 750px) {
+        .accordion {
+            padding: 5px;
+        }
+        .accordion-title {
+            font-size: 18px;
+        }
+        .accordion-content {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .accordion {
+            padding: 5px;
+        }
+        .accordion-title {
+            font-size: 16px;
+        }
+        .year {
+            display: none;
+        }
+        .accordion-content {
+            font-size: 12px;
+        }
     }
 `
