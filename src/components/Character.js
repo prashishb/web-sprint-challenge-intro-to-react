@@ -49,7 +49,6 @@ const StyledContainer = styled.div`
 const StyledAccordion = styled.div`
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 1%; */
 
     .accordion {
         background-color: #2A2B2E;
@@ -59,7 +58,7 @@ const StyledAccordion = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid yellow;;
+        border: 1px solid rgba(255,255,0, 30%);
         outline: none;
         transition: background-color 0.4s ease-in-out;
         &:hover {
@@ -81,7 +80,7 @@ const StyledAccordion = styled.div`
         padding-left: 1%;
         background-color: #2A2B2E;
         color: white;
-        border: 1px solid yellow;
+        border: 1px solid rgba(255,255,0, 40%);
         border-top: none;
     }
 `
